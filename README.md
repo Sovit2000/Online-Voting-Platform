@@ -2,7 +2,7 @@ Hello, I am Sovit Chaudhary
 
 Online Voting Platform
 -----------------------
-This is an Online Voting platform built using HTML5,CSS3,TailWindCSS,EJS for front end and Node.js, Express.js for backend with PostgreSQL as database. This is one of the best online voting plateform. Here, log in as an election adminnistrator and create multiple elections. Each election can have multiple questions, with election admin power to control the voters for a particular election. After the election has been created there is a live link that can be created where the voters can login and vote in it.
+This is an Online Voting platform built using HTML5,CSS3,TailWindCSS,EJS for front end and Node.js, Express.js for backend with PostgreSQL as database. This is one of the best online voting platform. Here, log in as an election adminnistrator and create multiple elections. Each election can have multiple questions, with election admin power to control the voters for a particular election. After the election has been created there is a live link that can be created where the voters can login and vote in it.
 
 Demo link ==>
 Deployed App link: https://online-voting-platform-8fwx.onrender.com
