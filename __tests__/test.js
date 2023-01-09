@@ -285,7 +285,6 @@ describe("Online Election suite", function () {
         _csrf: csrfToken,
         option: "Test option",
       });
-
     const groupedOptionsResponse = await agent
       .get(`/elections/${latestElection.id}/questions/${latestQuestion.id}`)
       .set("Accept", "application/json");
@@ -342,7 +341,6 @@ describe("Online Election suite", function () {
     const parsedQuestionsGroupedResponse = JSON.parse(groupedQuestionsResponse.text);
     const questionCount = parsedQuestionsGroupedResponse.questions.length;
     const latestQuestion = parsedQuestionsGroupedResponse.questions[questionCount - 1];
-
     res = await agent.get(`/elections/${latestElection.id}/questions/${latestQuestion.id}`);
     csrfToken = fetchCsrfToken(res);
     res = await agent.post(`/elections/${latestElection.id}/questions/${latestQuestion.id}`).send({
