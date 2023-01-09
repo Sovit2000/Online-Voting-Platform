@@ -27,3 +27,21 @@ Features of Online Voting Plateform
 -> Elections administrator can set custom path to election
 
 -> Uses tiny-csrf tokens to prevent attacks
+
+Uses
+-----
+
+Client: HTML5,CSS3,EJS, TailwindCSS
+
+Server: Node.js, Express.js
+
+Database: PostgresSQL
+
+Installation
+Don't forget to create the databse with corresponding name as mentioned in config.json
+
+Go to the project directory
+
+Install dependencies
+
+  npm install
