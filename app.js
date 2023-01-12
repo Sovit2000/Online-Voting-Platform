@@ -13,6 +13,7 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const connectEnsureLogin = require("connect-ensure-login");
+
 const session = require("express-session");
 const flash = require("connect-flash");
 const LocalStratergy = require("passport-local");
@@ -228,7 +229,7 @@ app.get("/login", (request, response) => {
     return response.redirect("/elections");
   }
   response.render("login", {
-    title: "Login to your account",
+    title: "Login",
     csrfToken: request.csrfToken(),
   });
 });
@@ -306,7 +307,6 @@ app.get(
     }
   }
 );
-
 
 //reset user password
 app.post(
@@ -1304,7 +1304,7 @@ app.get("/e/:urlString/", async (request, response) => {
           csrfToken: request.csrfToken(),
         });
       } else {
-        return response.render("404");
+        console.log(error);
       }
     } else if (request.user.role === "admin") {
       request.flash("error", "You cannot vote as Admin");
@@ -1379,10 +1379,6 @@ app.get("/e/:urlString/results", async (request, response) => {
     console.log(error);
     return response.status(422).json(error);
   }
-});
-
-app.use(function (request, response) {
-  response.status(404).render("404");
 });
 
 module.exports = app;
