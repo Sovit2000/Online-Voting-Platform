@@ -144,7 +144,7 @@ app.get("/", (request, response) => {
   }
 });
 
-//elections home page
+//elections homepage
 app.get(
   "/elections",
   connectEnsureLogin.ensureLoggedIn(),
@@ -291,7 +291,7 @@ app.get("/signout", (request, response, next) => {
   });
 });
 
-//password reset page
+//password reset-page
 app.get(
   "/password-reset",
   connectEnsureLogin.ensureLoggedIn(),
@@ -306,6 +306,7 @@ app.get(
     }
   }
 );
+
 
 //reset user password
 app.post(
