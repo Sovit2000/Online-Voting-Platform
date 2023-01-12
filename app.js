@@ -1360,7 +1360,7 @@ app.get("/e/:urlString/results", async (request, response) => {
     const election = await Election.getElectionURL(request.params.urlString);
     if (request.user.role === "voter") {
       if (!election.ended) {
-        return response.render("thankyou");
+        return response.render("finalpage");
       }
       if (!request.user.voted) {
         request.flash("error", "You have not completed your vote");
