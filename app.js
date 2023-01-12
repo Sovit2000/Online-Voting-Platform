@@ -4,10 +4,12 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const csrf = require("tiny-csrf");
 
+//user model imported here
 const { Admin, Election, Questions, Options, Voter, Answer } = require("./models");
 
 const bodyParser = require("body-parser");
 const path = require("path");
+
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const connectEnsureLogin = require("connect-ensure-login");
@@ -28,11 +30,18 @@ app.use(csrf("this_should_be_32_character_long", ["POST", "PUT", "DELETE"]));
 app.use(
   session({
     secret: "my-super-secret-key-2837428907583420",
+    //resave: false,
+    //saveUninitialized: true,
     cookie: {
       maxAge: 24 * 60 * 60 * 1000,
     },
   })
 );
+
+//setting the ejs is the engine
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use((request, response, next) => {
   response.locals.messages = request.flash();
   next();
@@ -113,9 +122,6 @@ passport.deserializeUser((id, done) => {
       });
   }
 });
-
-app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "public")));
 
 //landing page
 app.get("/", (request, response) => {
