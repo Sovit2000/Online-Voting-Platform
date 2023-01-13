@@ -1,47 +1,36 @@
-Hello, I am Sovit Chaudhary
+Hello, I am Sovit Chaudhary,
 
 Online Voting Platform
 -----------------------
-This is an Online Voting platform built using HTML5,CSS3,TailWindCSS,EJS for front end and Node.js, Express.js for backend with PostgreSQL as database. This is one of the best online voting platform. Here, log in as an election adminnistrator and create multiple elections. Each election can have multiple questions, with election admin power to control the voters for a particular election. After the election has been created there is a live link that can be created where the voters can login and vote in it.
 
-Demo link ==>
-Deployed App link: https://online-voting-platform-8fwx.onrender.com
+This is Online Voting Platform built by using HTML, CSS3, TailwindCSS, EJS for the front end and Node.js, Express.js for the back end. And PostgresSQL uses for database. This is one of the best online voting platform.In this application, Admin can Register here as an election administrator and create multiple elections. Multiple questions can be asked per election. Election authoritie (Admin) can  control  voters for a particular election. After an election  is created, you can create a live link for voters to log in and vote. 
 
+Demo Link ==>  App Link provided by : https://online-voting-platform-8fwx.onrender.com      
 
+Online Voting Platform Features 
+-------------------------------
+-> Admin can do Signup and login.
 
-Features of Online Voting Plateform
------------------------------------
+-> Admin can create multiple elections.
 
--> Admin will be able to signup
+-> Admin can create ballot from election questions.
 
--> Admin can create multiple elections
+-> Admin can register voters.
 
--> Admin can create a ballot of questions in an election
+-> Admin can manage questions and voters also.
 
--> Admin can register voters
+-> Admin can start and end elections.
 
--> Admin can launch an election and end election
+-> Password reset feature for admin and voters.
 
--> Reset password feature for both admin and voter
+-> Admin can set custom paths to elections.
 
--> Elections administrator can set custom path to election
-
--> Uses tiny-csrf tokens to prevent attacks
+-> In this app, tiny-csrf tokens are used to prevent attacks. 
 
 Uses
------
-
-Client: HTML5,CSS3,EJS, TailwindCSS
+----
+Client-side: HTML, CSS3, EJS, TailwindCSS
 
 Server: Node.js, Express.js
 
 Database: PostgresSQL
-
-Installation
-Don't forget to create the databse with corresponding name as mentioned in config.json
-
-Go to the project directory
-
-Install dependencies
-
-  npm install
